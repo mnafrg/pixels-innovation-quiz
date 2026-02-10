@@ -27,9 +27,14 @@ export default function Quiz() {
         }
     };
 
-    return showResult ? (
-        <Result scores={scores} />
-    ) : (
-        <Question data={questions[currentQ]} onAnswer={handleAnswer} />
-    );
+   return showResult ? (
+  <Result scores={scores} />
+) : (
+  <Question
+    data={questions[currentQ]}
+    onAnswer={handleAnswer}
+    progress={((currentQ) / questions.length) * 100}
+  />
+);
+
 }
