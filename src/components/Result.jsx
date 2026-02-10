@@ -3,12 +3,13 @@ export default function Result({ scores }) {
     scores[a] > scores[b] ? a : b
   );
 
-  const messages = {
-    design: "🎨 You belong in the Design Committee!",
-    pr: "📢 You belong in the PR Committee!",
-    hr: "📋 You belong in the HR Committee!",
-    tech: "💻 You belong in the Tech Committee!"
-  };
+const messages = {
+  hr: "🤍 You belong in the HR Committee!",
+  multimedia: "🎨 You belong in the Multimedia Committee!",
+  academic: "💻 You belong in the Academic Committee!",
+  pr: "📢 You belong in the PR & Marketing Committee!"
+};
+
 
   return (
     <div className="card">
