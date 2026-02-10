@@ -2,7 +2,7 @@ const questions = [
     {
         question: "When working in a team, you are usually…",
         options: [
-            { text: "The creative idea person 🎨", scores: { design: 2 } },
+            { text: "The 🎨", scores: { design: 2 } },
             { text: "The one who talks to people 📢", scores: { pr: 2 } },
             { text: "The organizer and planner 📋", scores: { hr: 2 } },
             { text: "The technical problem solver 💻", scores: { tech: 2 } }
