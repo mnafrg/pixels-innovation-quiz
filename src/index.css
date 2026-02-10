@@ -1,36 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #6C63FF, #3F3D56);
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(160deg, #5f2c82, #49a09d);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .app {
-  background: white;
-  width: 95%;
-  max-width: 400px;
-  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
   padding: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  text-align: center;
 }
 
-button {
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 25px 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  animation: fadeIn 0.4s ease;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.option-btn {
   width: 100%;
-  margin: 8px 0;
-  padding: 12px;
-  border-radius: 12px;
+  padding: 14px;
+  border-radius: 14px;
   border: none;
+  margin-bottom: 12px;
+  font-size: 15px;
+  background: #f3f4f6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  transform: scale(1.03);
+  background: #e0e7ff;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #6C63FF, #4facfe);
+  transition: width 0.3s ease;
+}
+
+.result-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.result-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.restart-btn {
   background: #6C63FF;
   color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  width: 100%;
   font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
 }
 
-button:hover {
-  opacity: 0.9;
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
 }
