@@ -1,4 +1,10 @@
+import { useMemo } from "react";
+
 export default function Question({ data, onAnswer, progress }) {
+  const shuffledOptions = useMemo(() => {
+    return [...data.options].sort(() => Math.random() - 0.5);
+  }, [data]);
+
   return (
     <div className="card">
       <div className="progress-bar">
@@ -7,7 +13,7 @@ export default function Question({ data, onAnswer, progress }) {
 
       <h2>{data.question}</h2>
 
-      {data.options.map((opt, i) => (
+      {shuffledOptions.map((opt, i) => (
         <button
           key={i}
           className="option-btn"
